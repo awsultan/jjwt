@@ -16,7 +16,7 @@
 package io.jsonwebtoken.impl
 
 import io.jsonwebtoken.JwsHeader
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.lang.Bytes
 import io.jsonwebtoken.io.Encoders
 import org.junit.Test

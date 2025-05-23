@@ -20,7 +20,7 @@ import io.jsonwebtoken.Header;
 import io.jsonwebtoken.JweHeader;
 import io.jsonwebtoken.JwsHeader;
 import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.impl.io.Base64UrlStreamEncoder;
 import io.jsonwebtoken.impl.io.ByteBase64UrlStreamEncoder;
 import io.jsonwebtoken.impl.io.CountingInputStream;

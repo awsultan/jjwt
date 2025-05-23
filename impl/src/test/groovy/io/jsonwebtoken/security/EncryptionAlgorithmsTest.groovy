@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.security
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.io.Streams
 import io.jsonwebtoken.impl.security.DefaultAeadRequest
 import io.jsonwebtoken.impl.security.DefaultAeadResult

@@ -16,7 +16,7 @@
 package io.jsonwebtoken.issues
 
 import io.jsonwebtoken.Header
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.Locator
 import io.jsonwebtoken.impl.DefaultJwtBuilder
 import io.jsonwebtoken.impl.DefaultJwtParser

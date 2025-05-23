@@ -18,7 +18,6 @@ package io.jsonwebtoken.io;
 import io.jsonwebtoken.Identifiable;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.JwtParserBuilder;
-import io.jsonwebtoken.Jwts;
 
 import java.io.InputStream;
 import java.io.OutputStream;

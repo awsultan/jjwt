@@ -16,7 +16,7 @@
 package io.jsonwebtoken.impl;
 
 import io.jsonwebtoken.Header;
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.lang.Collections;
 
 import java.util.LinkedHashSet;

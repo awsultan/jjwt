@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.impl;
 
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.ProtectedHeader;
 import io.jsonwebtoken.impl.lang.Parameter;
 import io.jsonwebtoken.impl.lang.Parameters;

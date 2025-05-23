@@ -16,7 +16,7 @@
 package io.jsonwebtoken.impl.compression
 
 import io.jsonwebtoken.CompressionException
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.io.Decoders
 import org.junit.Test
 

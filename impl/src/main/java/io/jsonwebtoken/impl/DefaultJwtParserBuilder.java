@@ -20,7 +20,7 @@ import io.jsonwebtoken.Clock;
 import io.jsonwebtoken.CompressionCodecResolver;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.JwtParserBuilder;
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.Locator;
 import io.jsonwebtoken.SigningKeyResolver;
 import io.jsonwebtoken.impl.io.DelegateStringDecoder;

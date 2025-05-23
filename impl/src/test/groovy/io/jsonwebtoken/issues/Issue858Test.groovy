@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.issues
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import org.junit.Test
 
 import static org.junit.Assert.assertEquals

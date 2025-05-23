@@ -13,11 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.jsonwebtoken;
+package io.jsonwebtoken.impl;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ClaimsBuilder;
+import io.jsonwebtoken.Header;
+import io.jsonwebtoken.JweHeaderMutator;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.JwtParserBuilder;
 import io.jsonwebtoken.io.CompressionAlgorithm;
 import io.jsonwebtoken.lang.Builder;
-import io.jsonwebtoken.lang.Classes;
 import io.jsonwebtoken.lang.Registry;
 import io.jsonwebtoken.lang.Supplier;
 import io.jsonwebtoken.security.AeadAlgorithm;
@@ -79,8 +84,7 @@ public final class Jwts {
      */
     public static final class ENC {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardEncryptionAlgorithms";
-        private static final Registry<String, AeadAlgorithm> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, AeadAlgorithm> REGISTRY = new io.jsonwebtoken.impl.security.StandardEncryptionAlgorithms();
 
         /**
          * Returns all standard JWA <a href="https://www.rfc-editor.org/rfc/rfc7518.html#section-5">Cryptographic
@@ -171,8 +175,7 @@ public final class Jwts {
      */
     public static final class SIG {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardSecureDigestAlgorithms";
-        private static final Registry<String, SecureDigestAlgorithm<?, ?>> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, SecureDigestAlgorithm<?, ?>> REGISTRY = new io.jsonwebtoken.impl.security.StandardSecureDigestAlgorithms();
 
         //prevent instantiation
         private SIG() {
@@ -332,8 +335,7 @@ public final class Jwts {
      */
     public static final class KEY {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardKeyAlgorithms";
-        private static final Registry<String, KeyAlgorithm<?, ?>> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, KeyAlgorithm<?, ?>> REGISTRY = new io.jsonwebtoken.impl.security.StandardKeyAlgorithms();
 
         /**
          * Returns all standard JWA standard <a href="https://www.rfc-editor.org/rfc/rfc7518.html#section-4">Cryptographic
@@ -960,8 +962,7 @@ public final class Jwts {
      */
     public static final class ZIP {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.io.StandardCompressionAlgorithms";
-        private static final Registry<String, CompressionAlgorithm> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, CompressionAlgorithm> REGISTRY = new io.jsonwebtoken.impl.io.StandardCompressionAlgorithms();
 
         /**
          * Returns various useful <a href="https://www.rfc-editor.org/rfc/rfc7518.html#section-7.3">
@@ -1003,20 +1004,16 @@ public final class Jwts {
     }
 
     // @since JJWT_RELEASE_VERSION
-    private static final Supplier<JwtBuilder> JWT_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.DefaultJwtBuilder$Supplier");
+    private static final Supplier<JwtBuilder> JWT_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.DefaultJwtBuilder.Supplier();
 
     // @since JJWT_RELEASE_VERSION
-    private static final Supplier<JwtParserBuilder> JWT_PARSER_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.DefaultJwtParserBuilder$Supplier");
+    private static final Supplier<JwtParserBuilder> JWT_PARSER_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.DefaultJwtParserBuilder.Supplier();
 
     // @since JJWT_RELEASE_VERSION
-    private static final Supplier<HeaderBuilder> HEADER_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.DefaultJwtHeaderBuilder$Supplier");
-
+    private static final Supplier<HeaderBuilder> HEADER_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.DefaultJwtHeaderBuilder.Supplier();
+	
     // @since JJWT_RELEASE_VERSION
-    private static final Supplier<ClaimsBuilder> CLAIMS_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.DefaultClaimsBuilder$Supplier");
+    private static final Supplier<ClaimsBuilder> CLAIMS_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.DefaultClaimsBuilder.Supplier();
 
     /**
      * A {@link Builder} that dynamically determines the type of {@link Header} to create based on builder state.

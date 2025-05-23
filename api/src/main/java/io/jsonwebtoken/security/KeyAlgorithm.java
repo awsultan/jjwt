@@ -16,7 +16,6 @@
 package io.jsonwebtoken.security;
 
 import io.jsonwebtoken.Identifiable;
-import io.jsonwebtoken.Jwts;
 
 import javax.crypto.SecretKey;
 import java.security.Key;

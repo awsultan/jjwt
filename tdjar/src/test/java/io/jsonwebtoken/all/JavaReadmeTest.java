@@ -17,7 +17,7 @@ package io.jsonwebtoken.all;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.security.AeadAlgorithm;
 import io.jsonwebtoken.security.Curve;
 import io.jsonwebtoken.security.EcPrivateJwk;

@@ -17,7 +17,7 @@ package io.jsonwebtoken.impl
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import io.jsonwebtoken.Claims
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import io.jsonwebtoken.impl.io.Streams
 import io.jsonwebtoken.impl.io.TestSerializer

@@ -17,7 +17,7 @@
 package io.jsonwebtoken.impl.security
 
 import io.jsonwebtoken.JwtException
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.io.Streams
 import io.jsonwebtoken.impl.lang.Bytes
 import io.jsonwebtoken.io.Decoders

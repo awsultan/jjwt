@@ -17,7 +17,7 @@ package io.jsonwebtoken.impl
 
 import io.jsonwebtoken.JweHeader
 import io.jsonwebtoken.JwsHeader
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.ProtectedHeader
 import io.jsonwebtoken.impl.io.Streams
 import io.jsonwebtoken.impl.lang.Bytes

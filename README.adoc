@@ -735,7 +735,7 @@ code quickly.  Here's an example:
 
 [,java]
 ----
-import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.impl.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.security.Key;
 

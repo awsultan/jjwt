@@ -45,20 +45,16 @@ public final class Jwks {
     private static final String JWKS_BRIDGE_FQCN = "io.jsonwebtoken.impl.security.JwksBridge";
 
     // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-    private static final Supplier<DynamicJwkBuilder<?, ?>> BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.security.DefaultDynamicJwkBuilder$Supplier");
+    private static final Supplier<DynamicJwkBuilder<?, ?>> BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultDynamicJwkBuilder.Supplier();
 
     // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-    private static final Supplier<JwkParserBuilder> PARSER_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.security.DefaultJwkParserBuilder$Supplier");
+    private static final Supplier<JwkParserBuilder> PARSER_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultJwkParserBuilder.Supplier();
 
     // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-    private static final Supplier<JwkSetBuilder> SET_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.security.DefaultJwkSetBuilder$Supplier");
+    private static final Supplier<JwkSetBuilder> SET_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultJwkSetBuilder.Supplier();
 
     // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-    private static final Supplier<JwkSetParserBuilder> SET_PARSER_BUILDER_SUPPLIER =
-            Classes.newInstance("io.jsonwebtoken.impl.security.DefaultJwkSetParserBuilder$Supplier");
+    private static final Supplier<JwkSetParserBuilder> SET_PARSER_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultJwkSetParserBuilder.Supplier();
 
     /**
      * Return a new JWK builder instance, allowing for type-safe JWK builder coercion based on a specified key or key pair.
@@ -160,8 +156,7 @@ public final class Jwks {
      */
     public static final class CRV {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardCurves";
-        private static final Registry<String, Curve> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, Curve> REGISTRY = new io.jsonwebtoken.impl.security.StandardCurves();
 
         /**
          * Returns a registry of all standard Elliptic Curves in the {@code JSON Web Key Elliptic Curve Registry}
@@ -285,8 +280,7 @@ public final class Jwks {
      */
     public static final class HASH {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardHashAlgorithms";
-        private static final Registry<String, HashAlgorithm> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final Registry<String, HashAlgorithm> REGISTRY = new io.jsonwebtoken.impl.security.StandardHashAlgorithms();
 
         /**
          * Returns a registry of various (<em>but not all</em>)
@@ -380,16 +374,14 @@ public final class Jwks {
      */
     public static final class OP {
 
-        private static final String IMPL_CLASSNAME = "io.jsonwebtoken.impl.security.StandardKeyOperations";
-        private static final Registry<String, KeyOperation> REGISTRY = Classes.newInstance(IMPL_CLASSNAME);
+        private static final String IMPL_CLASSNAME = "";
+        private static final Registry<String, KeyOperation> REGISTRY = new io.jsonwebtoken.impl.security.StandardKeyOperations();
 
         // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-        private static final Supplier<KeyOperationBuilder> BUILDER_SUPPLIER =
-                Classes.newInstance("io.jsonwebtoken.impl.security.DefaultKeyOperationBuilder$Supplier");
+        private static final Supplier<KeyOperationBuilder> BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultKeyOperationBuilder.Supplier();
 
         // @since JJWT_RELEASE_VERSION per https://github.com/jwtk/jjwt/issues/988
-        private static final Supplier<KeyOperationPolicyBuilder> POLICY_BUILDER_SUPPLIER =
-                Classes.newInstance("io.jsonwebtoken.impl.security.DefaultKeyOperationPolicyBuilder$Supplier");
+        private static final Supplier<KeyOperationPolicyBuilder> POLICY_BUILDER_SUPPLIER = new io.jsonwebtoken.impl.security.DefaultKeyOperationPolicyBuilder.Supplier();
 
         /**
          * Creates a new {@link KeyOperationBuilder} for creating custom {@link KeyOperation} instances.

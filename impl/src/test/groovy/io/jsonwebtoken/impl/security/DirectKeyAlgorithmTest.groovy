@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.impl.security
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.DefaultJweHeader
 import io.jsonwebtoken.lang.Arrays
 import io.jsonwebtoken.security.DecryptionKeyRequest

@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.issues
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.UnsupportedJwtException
 import io.jsonwebtoken.impl.security.TestKeys
 import org.junit.Test

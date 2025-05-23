@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.security
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.lang.Registry
 import org.junit.Test
 

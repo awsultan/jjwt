@@ -15,7 +15,7 @@
  */
 package io.jsonwebtoken.impl.security
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.lang.Functions
 import io.jsonwebtoken.lang.Classes
 import io.jsonwebtoken.security.Jwks

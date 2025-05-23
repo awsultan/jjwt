@@ -16,7 +16,7 @@
 package io.jsonwebtoken.impl
 
 import io.jsonwebtoken.Identifiable
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.MalformedJwtException
 import io.jsonwebtoken.UnsupportedJwtException
 import io.jsonwebtoken.impl.lang.IdRegistry

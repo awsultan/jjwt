@@ -16,7 +16,7 @@
 //file:noinspection GrDeprecatedAPIUsage
 package io.jsonwebtoken.security
 
-import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.impl.Jwts
 import io.jsonwebtoken.impl.DefaultJwtBuilder
 import io.jsonwebtoken.impl.lang.Bytes
 import io.jsonwebtoken.impl.security.*
